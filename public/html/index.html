@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"= ng-app='ngTodo'>
+<head>
+  <meta charaset="UTF-8">
+  <title>Homeschool_Study</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  
+<h1 align="center">To Do Today</h1><br><br>
+</head>
+<body>
+  <div class="container" ng-controller='TodoController'>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <ul>
+          <div class="checkbox">
+          <ul ng-repeat='singleTodo in todoList'>
+            <input type="checkbox" value="">
+            <a ng-href="{{singleTodo.link}}">{{singleTodo.text}}</a>
+          </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="row">
+    <div class="col-sm-4">
+    <div class="form-group">
+      <Label>Notes:</label>
+      <input type="text" class="form-control" placeholder="Do you need to add something?" ng-model='currentTodo'>
+          <button class="btn btn-primary btn-block" ng-click='saveTodo()' type="button">Save To Do!</button>
+        </div>
+      </div>
+    </div> -->
+</div>
+
+<script src='js/app.js'></script>
+</body>
+</html>
